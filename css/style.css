@@ -32,7 +32,7 @@ header p {
 }
 
 main {
-  margin: 92px 0;
+  margin: 92px 0 108px;
 }
 
 h2 {
@@ -87,6 +87,7 @@ ion-icon {
 ion-icon:not(.selected) {
   opacity: 0;
 }
+
 img {
   width: 144px;
   height: 87px;
@@ -111,4 +112,47 @@ h3 {
   font-size: 16px;
   line-height: 19px;
   color: #000;
+}
+
+footer {
+  width: 100vw;
+  height: 92px;
+  background: #fff;
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  width: 90%;
+  height: 61px;
+
+  border-radius: 50px;
+  font-size: 20px;
+  line-height: 23px;
+
+  color: #fff;
+  text-align: center;
+  letter-spacing: 0.018em;
+}
+
+button:disabled {
+  background: #cbcbcb;
+  cursor: not-allowed;
+}
+
+button:not(:disabled) {
+  font-weight: 700;
+  background: #32b72f;
+  transition: all 400ms;
+}
+
+button:not(:disabled):hover {
+  scale: 0.97;
+  cursor: pointer;
 }
