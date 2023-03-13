@@ -40,7 +40,7 @@ function openModal() {
     food[cat].price.innerText = NumberToReal(order[cat].price);
     orderData.total += order[cat].price;
   }
-  totalDialog.innerText = NumberToReal(total);
+  totalDialog.innerText = NumberToReal(orderData.total);
 }
 
 function closeModal() {
