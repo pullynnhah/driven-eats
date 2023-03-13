@@ -47,7 +47,7 @@ function closeModal() {
   dialog.close();
 }
 
-function GetOrderInfo() {
+function getOrderInfo() {
   orderData.name = prompt("Nome:") || "J. Doe";
   orderData.address = prompt("Address:") || "Rua dos Bobos, 0";
   openModal();
