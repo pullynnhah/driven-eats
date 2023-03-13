@@ -11,97 +11,122 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <header>
-      <h1>DrivenEats</h1>
-      <p>Sua comida em 6 minutos</p>
-    </header>
-    <main>
-      <section aria-labelledby="dish">
-        <h2 id="dish">Primeiro, seu prato</h2>
-        <div class="dishes">
-          <div class="food" onclick="selectFood(this, 'dish')">
-            <img src="./assets/dishes/coxivara.jpeg" alt="Coxivara" />
-            <h3>Coxivara</h3>
-            <p class="description">Coxinha em formato de capivara</p>
-            <p class="price">R$ <span>8,50</span></p>
-            <ion-icon name="checkmark-circle"></ion-icon>
+    <div class="container">
+      <header>
+        <h1>DrivenEats</h1>
+        <p>Sua comida em 6 minutos</p>
+      </header>
+      <main>
+        <section aria-labelledby="dish">
+          <h2 id="dish">Primeiro, seu prato</h2>
+          <div class="dishes">
+            <div class="food" onclick="selectFood(this, 'dish')">
+              <img src="./assets/dishes/coxivara.jpeg" alt="Coxivara" />
+              <h3>Coxivara</h3>
+              <p class="description">Coxinha em formato de capivara</p>
+              <p class="price">R$ <span>8,50</span></p>
+              <ion-icon name="checkmark-circle"></ion-icon>
+            </div>
+            <div class="food" onclick="selectFood(this, 'dish')">
+              <img src="./assets/dishes/tapioca-frango.jpg" alt="Tapioca de Frango" />
+              <h3>Tapioca de Frango</h3>
+              <p class="description">Tapioca de Frango c/ catupiry</p>
+              <p class="price">R$ <span>19,90</span></p>
+              <ion-icon name="checkmark-circle"></ion-icon>
+            </div>
+            <div class="food" onclick="selectFood(this, 'dish')">
+              <img src="./assets/dishes/batata-curly.jpg" alt="Batata Curly" />
+              <h3>Batata Curly</h3>
+              <p class="description">Batata frita toda enroladinha</p>
+              <p class="price">R$ <span>32,80</span></p>
+              <ion-icon name="checkmark-circle"></ion-icon>
+            </div>
           </div>
-          <div class="food" onclick="selectFood(this, 'dish')">
-            <img src="./assets/dishes/tapioca-frango.jpg" alt="Tapioca de Frango" />
-            <h3>Tapioca de Frango</h3>
-            <p class="description">Tapioca de Frango c/ catupiry</p>
-            <p class="price">R$ <span>19,90</span></p>
-            <ion-icon name="checkmark-circle"></ion-icon>
+        </section>
+        <section aria-labelledby="drink">
+          <h2 id="drink">Agora, sua bebida</h2>
+          <div class="drinks">
+            <div class="food" onclick="selectFood(this, 'drink')">
+              <img src="./assets/drinks/coca.jpg" alt="Coca-Cola" />
+              <h3>Coca-Cola</h3>
+              <p class="description">Coca-Cola de 350ml</p>
+              <p class="price">R$ <span>5,50</span></p>
+              <ion-icon name="checkmark-circle"></ion-icon>
+            </div>
+            <div class="food" onclick="selectFood(this, 'drink')">
+              <img src="./assets/drinks/fantas.jpeg" alt="Fanta Surpresa" />
+              <h3>Fanta Surpresa</h3>
+              <p class="description">Fanta Sortida de 350ml</p>
+              <p class="price">R$ <span>4,50</span></p>
+              <ion-icon name="checkmark-circle"></ion-icon>
+            </div>
+            <div class="food" onclick="selectFood(this, 'drink')">
+              <img src="./assets/drinks/pepsi.jpeg" alt="Pepsi" />
+              <h3>Pepsi</h3>
+              <p class="description">Pepsi de 350ml</p>
+              <p class="price">R$ <span>5,00</span></p>
+              <ion-icon name="checkmark-circle"></ion-icon>
+            </div>
           </div>
-          <div class="food" onclick="selectFood(this, 'dish')">
-            <img src="./assets/dishes/batata-curly.jpg" alt="Batata Curly" />
-            <h3>Batata Curly</h3>
-            <p class="description">Batata frita toda enroladinha</p>
-            <p class="price">R$ <span>32,80</span></p>
-            <ion-icon name="checkmark-circle"></ion-icon>
+        </section>
+        <section aria-labelledby="dessert">
+          <h2 id="dessert">Por fim, sua sobremesa</h2>
+          <div class="desserts">
+            <div class="food" onclick="selectFood(this, 'dessert')">
+              <img src="./assets/desserts/pi-pie.jpg" alt="Torta π" />
+              <h3>Torta π</h3>
+              <p class="description">Para fãs de matemática</p>
+              <p class="price">R$ <span>31,42</span></p>
+              <ion-icon name="checkmark-circle"></ion-icon>
+            </div>
+            <div class="food" onclick="selectFood(this, 'dessert')">
+              <img src="./assets/desserts/cinnamon-roll.jpeg" alt="Cinnamon Roll" />
+              <h3>Cinnamon Roll</h3>
+              <p class="description">Rolinho de canela</p>
+              <p class="price">R$ <span>9,20</span></p>
+              <ion-icon name="checkmark-circle"></ion-icon>
+            </div>
+            <div class="food" onclick="selectFood(this, 'dessert')">
+              <img src="./assets/desserts/pudim.jpeg" alt="Pudim" />
+              <h3>Pudim</h3>
+              <p class="description">Pudim de Leite Moça</p>
+              <p class="price">R$ <span>11,80</span></p>
+              <ion-icon name="checkmark-circle"></ion-icon>
+            </div>
           </div>
-        </div>
-      </section>
-      <section aria-labelledby="drink">
-        <h2 id="drink">Agora, sua bebida</h2>
-        <div class="drinks">
-          <div class="food" onclick="selectFood(this, 'drink')">
-            <img src="./assets/drinks/coca.jpg" alt="Coca-Cola" />
-            <h3>Coca-Cola</h3>
-            <p class="description">Coca-Cola de 350ml</p>
-            <p class="price">R$ <span>5,50</span></p>
-            <ion-icon name="checkmark-circle"></ion-icon>
-          </div>
-          <div class="food" onclick="selectFood(this, 'drink')">
-            <img src="./assets/drinks/fantas.jpeg" alt="Fanta Surpresa" />
-            <h3>Fanta Surpresa</h3>
-            <p class="description">Fanta Sortida de 350ml</p>
-            <p class="price">R$ <span>4,50</span></p>
-            <ion-icon name="checkmark-circle"></ion-icon>
-          </div>
-          <div class="food" onclick="selectFood(this, 'drink')">
-            <img src="./assets/drinks/pepsi.jpeg" alt="Pepsi" />
-            <h3>Pepsi</h3>
-            <p class="description">Pepsi de 350ml</p>
-            <p class="price">R$ <span>5,00</span></p>
-            <ion-icon name="checkmark-circle"></ion-icon>
-          </div>
-        </div>
-      </section>
-      <section aria-labelledby="dessert">
-        <h2 id="dessert">Por fim, sua sobremesa</h2>
-        <div class="desserts">
-          <div class="food" onclick="selectFood(this, 'dessert')">
-            <img src="./assets/desserts/pi-pie.jpg" alt="Torta π" />
-            <h3>Torta π</h3>
-            <p class="description">Para fãs de matemática</p>
-            <p class="price">R$ <span>31,42</span></p>
-            <ion-icon name="checkmark-circle"></ion-icon>
-          </div>
-          <div class="food" onclick="selectFood(this, 'dessert')">
-            <img src="./assets/desserts/cinnamon-roll.jpeg" alt="Cinnamon Roll" />
-            <h3>Cinnamon Roll</h3>
-            <p class="description">Rolinho de canela</p>
-            <p class="price">R$ <span>9,20</span></p>
-            <ion-icon name="checkmark-circle"></ion-icon>
-          </div>
-          <div class="food" onclick="selectFood(this, 'dessert')">
-            <img src="./assets/desserts/pudim.jpeg" alt="Pudim" />
-            <h3>Pudim</h3>
-            <p class="description">Pudim de Leite Moça</p>
-            <p class="price">R$ <span>11,80</span></p>
-            <ion-icon name="checkmark-circle"></ion-icon>
-          </div>
-        </div>
-      </section>
-    </main>
+        </section>
+      </main>
 
-    <footer>
-      <button disabled>
-        Selecione os 3 itens<br />
-        para fechar o pedido
-      </button>
-    </footer>
+      <footer>
+        <button disabled>
+          Selecione os 3 itens<br />
+          para fechar o pedido
+        </button>
+      </footer>
+    </div>
+    <dialog>
+      <h2>Confirme seu pedido</h2>
+      <div class="order">
+        <div class="dish">
+          <p class="name">Dish</p>
+          <p class="price">14,90</p>
+        </div>
+        <div class="drink">
+          <p class="name">Dish</p>
+          <p class="price">14,90</p>
+        </div>
+        <div class="dessert">
+          <p class="name">Dish</p>
+          <p class="price">14,90</p>
+        </div>
+        <div class="total">
+          <p>Total</p>
+          <p>R$ <span>99,99</span></p>
+        </div>
+      </div>
+      <button class="confirm" onclick="placeOrder()">Tudo certo, pode pedir!</button>
+      <button class="cancel" onclick="closeModal()">Cancelar</button>
+    </dialog>
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

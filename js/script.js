@@ -6,12 +6,15 @@ function selectFood(food, category) {
 
   food.classList.add("selected");
   addOrder(food, category);
-  console.log(order, order.length);
   checkButton();
 }
 
 function RealToNumber(real) {
   return Number(real.replace(",", "."));
+}
+
+function NumberToReal(num) {
+  return num.toFixed(2).replace(".", ",");
 }
 
 function addOrder(food, category) {
@@ -22,12 +25,67 @@ function addOrder(food, category) {
 }
 
 function checkButton() {
-  if (button.disabled && Object.keys(order).length === 3) {
-    button.disabled = false;
-    button.innerText = "Fechar pedido";
-    button.addEventListener("click", () => console.log(order));
+  if (footerBtn.disabled && Object.keys(order).length === 3) {
+    footerBtn.disabled = false;
+    footerBtn.innerText = "Fechar pedido";
+    footerBtn.addEventListener("click", getOrderInfo);
   }
 }
 
+function openModal() {
+  dialog.showModal();
+  orderData.total = 0;
+  for (const cat in order) {
+    food[cat].name.innerText = order[cat].name;
+    food[cat].price.innerText = NumberToReal(order[cat].price);
+    orderData.total += order[cat].price;
+  }
+  totalDialog.innerText = NumberToReal(total);
+}
+
+function closeModal() {
+  dialog.close();
+}
+
+function GetOrderInfo() {
+  orderData.name = prompt("Nome:") || "J. Doe";
+  orderData.address = prompt("Address:") || "Rua dos Bobos, 0";
+  openModal();
+}
+
+function placeOrder() {
+  const message = `Olá, gostaria de fazer o pedido:
+- Prato: ${order.dish.name}
+- Bebida: ${order.drink.name}
+- Sobremesa: ${order.dessert.name}
+Total: R$ ${orderData.total.toFixed(2)}
+  
+Nome: ${orderData.name}
+Endereço: ${orderData.address}`;
+
+  const link = `https://wa.me/5551992230218?text=${encodeURIComponent(message)}`;
+  window.open(link);
+}
+
 const order = {};
-const button = document.querySelector("button");
+const orderData = {
+  total: 0
+};
+const footerBtn = document.querySelector("button");
+const dialog = document.querySelector("dialog");
+
+const food = {
+  dish: {
+    name: dialog.querySelector(".dish .name"),
+    price: dialog.querySelector(".dish .price")
+  },
+  drink: {
+    name: dialog.querySelector(".drink .name"),
+    price: dialog.querySelector(".drink .price")
+  },
+  dessert: {
+    name: dialog.querySelector(".dessert .name"),
+    price: dialog.querySelector(".dessert .price")
+  }
+};
+const totalDialog = dialog.querySelector(".total span");
