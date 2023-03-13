@@ -14,6 +14,7 @@ header {
   position: fixed;
   left: 0;
   top: 0;
+  z-index: 1;
 
   color: #fff;
   background: #cf2b2b;
@@ -28,4 +29,86 @@ h1 {
 header p {
   font-size: 18px;
   line-height: 21px;
+}
+
+main {
+  margin: 92px 0;
+}
+
+h2 {
+  font: 26px/32px "Righteous", cursive;
+  padding-top: 31px;
+  margin-left: 19px;
+}
+
+section > div {
+  display: flex;
+  gap: 16px;
+  overflow: scroll;
+  padding: 0 19px;
+  margin-top: 17px;
+}
+
+.food {
+  min-width: 172px;
+  height: 216px;
+
+  background: #fff;
+  box-shadow: 0 0 10px -4px rgba(0, 0, 0, 0.25);
+  border-radius: 9px;
+
+  padding: 18px 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  position: relative;
+  transition: opacity 400ms;
+}
+
+.food.selected {
+  box-shadow: 0 0 10px -4px rgba(0, 0, 0, 0.25), inset 0 0 0 5px #32b72f;
+}
+
+.food:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+ion-icon {
+  position: absolute;
+  bottom: 14px;
+  right: 11px;
+
+  font-size: 19px;
+  color: #32b72f;
+}
+
+ion-icon:not(.selected) {
+  opacity: 0;
+}
+img {
+  width: 144px;
+  height: 87px;
+  border-radius: 4px;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.description {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 18px;
+
+  color: #a6a6a6;
+}
+
+.price {
+  font-size: 16px;
+  line-height: 19px;
+  color: #000;
 }
