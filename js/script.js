@@ -9,18 +9,18 @@ function selectFood(food, category) {
   checkButton();
 }
 
-function RealToNumber(real) {
+function toNumber(real) {
   return Number(real.replace(",", "."));
 }
 
-function NumberToReal(num) {
+function toReal(num) {
   return num.toFixed(2).replace(".", ",");
 }
 
 function addOrder(food, category) {
   order[category] = {
     name: food.querySelector("h3").innerText,
-    price: RealToNumber(food.querySelector(".price span").innerText)
+    price: food.querySelector(".price span").innerText
   };
 }
 
@@ -37,10 +37,10 @@ function openModal() {
   orderData.total = 0;
   for (const cat in order) {
     food[cat].name.innerText = order[cat].name;
-    food[cat].price.innerText = NumberToReal(order[cat].price);
-    orderData.total += order[cat].price;
+    food[cat].price.innerText = order[cat].price;
+    orderData.total += toNumber(order[cat].price);
   }
-  totalDialog.innerText = NumberToReal(orderData.total);
+  totalDialog.innerText = toReal(orderData.total);
 }
 
 function closeModal() {
@@ -71,9 +71,10 @@ const order = {};
 const orderData = {
   total: 0
 };
+
 const footerBtn = document.querySelector("button");
 const dialog = document.querySelector("dialog");
-
+const totalDialog = dialog.querySelector(".total span");
 const food = {
   dish: {
     name: dialog.querySelector(".dish .name"),
@@ -88,4 +89,3 @@ const food = {
     price: dialog.querySelector(".dessert .price")
   }
 };
-const totalDialog = dialog.querySelector(".total span");
