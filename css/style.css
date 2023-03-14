@@ -41,7 +41,7 @@ main {
   margin-left: 19px;
 }
 
-section > div {
+ul {
   display: flex;
   gap: 16px;
   overflow: scroll;
